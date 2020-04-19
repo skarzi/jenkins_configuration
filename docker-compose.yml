@@ -21,13 +21,17 @@ services:
     secrets:
       - admin_password
 
-  slave:
-    container_name: jenkins-slave
+  slave-1: &slave
     image: jenkins/jnlp-agent-docker:latest
     env_file:
-      - .envs/.production/.slave
+      - .envs/.production/.slave.1
     depends_on:
       - master
+
+  slave-2:
+    <<: *slave
+    env_file:
+      - .envs/.production/.slave.2
 
 secrets:
   admin_password:
