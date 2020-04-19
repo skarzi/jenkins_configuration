@@ -33,6 +33,14 @@ services:
     env_file:
       - .envs/.production/.slave.2
 
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      # TODO: support SSL/TLS
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
 secrets:
   admin_password:
     file: ./.secrets/admin_password
