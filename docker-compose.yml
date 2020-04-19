@@ -1,0 +1,37 @@
+---
+version: '3.8'
+services:
+  master:
+    container_name: jenkins-master
+    build:
+      context: .
+      dockerfile: ./docker/master/Dockerfile
+    env_file:
+      - .envs/.production/.master
+    environment:
+      - CASC_JENKINS_CONFIG=/var/jenkins_conf
+    ports:
+      # web interface
+      - "8989:8080"
+      # port to communicate with JNLP agents
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - ./config/casc/:/var/jenkins_conf/
+    secrets:
+      - admin_password
+
+  slave:
+    container_name: jenkins-slave
+    image: jenkins/jnlp-agent-docker:latest
+    env_file:
+      - .envs/.production/.slave
+    depends_on:
+      - master
+
+secrets:
+  admin_password:
+    file: ./.secrets/admin_password
+
+volumes:
+  jenkins_home:

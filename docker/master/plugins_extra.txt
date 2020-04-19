@@ -1,0 +1,11 @@
+authorize-project
+blueocean:latest
+credentials:latest
+docker-workflow:latest
+git:latest
+github-oauth:latest
+matrix-auth:latest
+text-finder:latest
+timestamper:latest
+workflow-aggregator:latest
+configuration-as-code:1.39

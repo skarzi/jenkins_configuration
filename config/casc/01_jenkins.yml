@@ -1,0 +1,43 @@
+---
+jenkins:
+  # numExecutors: 1
+  mode: NORMAL
+  scmCheckoutRetryCount: 3
+  labelString: "master-label"
+
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: admin
+          password: ${admin_password}
+
+#  authorizationStrategy:
+#    globalMatrix:
+#      grantedPermissions:
+#        - "Overall/Read:anonymous"
+#        - "Job/Read:anonymous"
+#        - "View/Read:anonymous"
+#        - "Overall/Administer:anonymous"
+
+#  crumbIssuer: "standard"
+
+#  remotingSecurity:
+#    enabled: true
+
+# credentials:
+#   system:
+#     domainCredentials:
+#       - credentials:
+#         - usernamePassword:
+#           scope: GLOBAL
+#           id: github-user
+#           username: ewelina
+#           password: ${github:-githubPassw0rd}
+#           description: github username/password
+
+tool:
+  git:
+    installations:
+      - name: Default
+        home: "git"

@@ -1,0 +1,4 @@
+.envs/.production/
+.secrets/
+
+.python-version
