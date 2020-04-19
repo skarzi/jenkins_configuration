@@ -1,7 +1,10 @@
 ---
 jenkins:
-  # numExecutors: 1
   mode: NORMAL
+  numExecutors: 0
+  agentProtocols:
+    - "JNLP4-connect"
+    - "Ping"
   scmCheckoutRetryCount: 3
   labelString: "master-label"
 
@@ -12,13 +15,11 @@ jenkins:
         - id: admin
           password: ${admin_password}
 
-#  authorizationStrategy:
-#    globalMatrix:
-#      grantedPermissions:
-#        - "Overall/Read:anonymous"
-#        - "Job/Read:anonymous"
-#        - "View/Read:anonymous"
-#        - "Overall/Administer:anonymous"
+  projectNamingStrategy:
+    pattern:
+      description: "Restrict project names to alphanumeric characters"
+      forceExistingJobs: true
+      namePattern: "[a-zA-Z0-9_-]{3,}"
 
 #  crumbIssuer: "standard"
 
@@ -39,5 +40,5 @@ jenkins:
 tool:
   git:
     installations:
-      - name: Default
+      - name: "Default"
         home: "git"
