@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.232
+FROM jenkins/jenkins:2.233
 
 ARG JAVA_OPTS
 
