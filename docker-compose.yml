@@ -24,14 +24,14 @@ services:
   slave-1: &slave
     image: jenkins/jnlp-agent-docker:latest
     env_file:
-      - .envs/.production/.slave.1
+      - .envs/.production/.slave-1
     depends_on:
       - master
 
   slave-2:
     <<: *slave
     env_file:
-      - .envs/.production/.slave.2
+      - .envs/.production/.slave-2
 
   nginx-proxy:
     image: jwilder/nginx-proxy
