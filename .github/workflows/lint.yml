@@ -1,0 +1,20 @@
+---
+name: Lint
+on:
+  - push
+  - pull_request
+jobs:
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'set up Python 3.8'
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install yamllint
+      - name: lint yaml files
+        run: yamllint -c .yamllint.yml -s .

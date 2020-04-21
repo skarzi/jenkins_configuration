@@ -1,0 +1,8 @@
+---
+extends: default
+ignore: .venv
+# GitHub actions uses `on` key to set workflow triggering configuration
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#on
+rules:
+  truthy:
+    check-keys: false
