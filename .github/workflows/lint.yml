@@ -18,3 +18,19 @@ jobs:
           pip install yamllint
       - name: lint yaml files
         run: yamllint -c .yamllint.yml -s .
+
+  lint-dotenvs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: find dotenv files to lint
+        id: find-dotenvs
+        run: |
+          _DOTENV_FILES=$(find .envs/.dist -type f | paste -sd ' ')
+          echo "::set-output name=dotenv_files::${_DOTENV_FILES}"
+      - uses: wemake-services/dotenv-linter@master
+        with:
+          reporter: 'github-pr-review'
+          options: '${{ steps.find-dotenvs.outputs.dotenv_files }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.github_token }}
