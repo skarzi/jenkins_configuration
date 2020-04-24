@@ -5,13 +5,6 @@ jenkins:
   scmCheckoutRetryCount: 3
   labelString: "master"
 
-  securityRealm:
-    local:
-      allowsSignup: false
-      users:
-        - id: admin
-          password: ${admin_password}
-
   projectNamingStrategy:
     pattern:
       description: "Restrict project names to alphanumeric characters"

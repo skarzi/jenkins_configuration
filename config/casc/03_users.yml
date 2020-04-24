@@ -1,0 +1,11 @@
+---
+jenkins:
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+        - id: admin
+          password: ${admin_password}
+        - id: delfina
+          password: ${delfina_password}

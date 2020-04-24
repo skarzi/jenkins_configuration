@@ -20,6 +20,7 @@ services:
       - ./config/casc/:/var/jenkins_conf/
     secrets:
       - admin_password
+      - delfina_password
 
   slave-1: &slave
     image: jenkins/jnlp-agent-docker:latest
@@ -44,6 +45,8 @@ services:
 secrets:
   admin_password:
     file: ./.secrets/admin_password
+  delfina_password:
+    file: ./.secrets/delfina_password
 
 volumes:
   jenkins_home:

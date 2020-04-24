@@ -29,6 +29,7 @@ with `!!SET_VALUE!!` value):
 Populate all secrets defined in `docker-compose.yml`:
 
 + `.secrets/admin_password` - Jenkins' admin password
++ `.secrets/delfina_password` - Delfina's password
 
 
 ### Run services
