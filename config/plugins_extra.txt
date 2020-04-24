@@ -8,4 +8,5 @@ matrix-auth:latest
 text-finder:latest
 timestamper:latest
 workflow-aggregator:latest
+ws-cleanup:latest
 configuration-as-code:1.39
