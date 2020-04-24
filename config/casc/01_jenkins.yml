@@ -2,33 +2,8 @@
 jenkins:
   mode: NORMAL
   numExecutors: 0
-  agentProtocols:
-    - "JNLP4-connect"
-    - "Ping"
   scmCheckoutRetryCount: 3
   labelString: "master"
-
-  nodes:
-    - permanent:
-        labelString: "slave"
-        launcher:
-          jnlp:
-            workDirSettings:
-              disabled: false
-              workDirPath: "/home/jenkins/agent/"
-        name: "slave-1"
-        numExecutors: 1
-        remoteFS: "/home/jenkins/.jenkins/"
-    - permanent:
-        labelString: "slave"
-        launcher:
-          jnlp:
-            workDirSettings:
-              disabled: false
-              workDirPath: "/home/jenkins/agent/"
-        name: "slave-2"
-        numExecutors: 1
-        remoteFS: "/home/jenkins/.jenkins/"
 
   securityRealm:
     local:
