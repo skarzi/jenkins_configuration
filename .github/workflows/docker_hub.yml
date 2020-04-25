@@ -8,7 +8,7 @@ on:
     types:
       - published
 jobs:
-  push_to_registry:
+  push-to-docker-hub:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
