@@ -6,6 +6,6 @@ jenkins:
       enableCaptcha: false
       users:
         - id: admin
-          password: ${admin_password}
+          password: "${admin_password}"
         - id: delfina
-          password: ${delfina_password}
+          password: "${delfina_password}"

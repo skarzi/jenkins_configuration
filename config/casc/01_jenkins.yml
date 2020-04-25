@@ -32,3 +32,8 @@ tool:
     installations:
       - name: "Default"
         home: "git"
+
+unclassified:
+  location:
+    adminAddress: "skarzi <me@skarzi.com>"
+    url: "http://ci.skarzi.com/"
