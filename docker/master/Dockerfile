@@ -3,7 +3,9 @@ FROM jenkins/jenkins:2.233
 ARG JAVA_OPTS
 ARG DOCKER_GID
 
-ENV JENKINS_HOME=/var/jenkins_home \
+ENV DOCKER_GID=${DOCKER_GID} \
+    JAVA_OPTS=${JAVA_OPTS} \
+    JENKINS_HOME=/var/jenkins_home \
     JENKINS_PLUGINS_FILE=/usr/share/jenkins/ref/plugins_extra.txt
 # NOTE: first argument disable guide showed after initial Jenkins installation.
 # Second one is necessary for `docker-plugin`, because otherwise it will not
