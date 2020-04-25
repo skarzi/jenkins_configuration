@@ -32,10 +32,14 @@ services:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
 secrets:
+  # users
   admin_password:
     file: ./.secrets/admin_password
   delfina_password:
     file: ./.secrets/delfina_password
+  # docker cloud
+  skarzi_docker_hub_password:
+    file: ./.secrets/skarzi_docker_hub_password
 
 volumes:
   jenkins_home:

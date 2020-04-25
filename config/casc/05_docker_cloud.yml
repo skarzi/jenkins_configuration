@@ -1,0 +1,45 @@
+---
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+            description: "skarzi docker hub credentials"
+            id: "docker_hub__skarzi"
+            username: "skarzi"
+            password: "${skarzi_docker_hub_password}"
+            scope: GLOBAL
+        domain:
+          name: "docker-cloud"
+
+jenkins:
+  clouds:
+    - docker:
+        dockerApi:
+          connectTimeout: 60
+          dockerHost:
+            uri: "unix:///var/run/docker.sock"
+          readTimeout: 60
+        exposeDockerHost: true
+        name: "docker"
+        templates:
+          - connector:
+              jnlp:
+                jnlpLauncher:
+                  workDirSettings:
+                    disabled: false
+                    failIfWorkDirIsMissing: false
+                    internalDir: "remoting"
+                    workDirPath: "/home/jenkins/agent"
+                user: "jenkins"
+            dockerTemplateBase:
+              image: "skarzi/jenkins-jnlp-slave-dind"
+              pullCredentialsId: "docker_hub__skarzi"
+              volumes:
+                - "/var/run/docker.sock:/var/run/docker.sock"
+              volumesString: "/var/run/docker.sock:/var/run/docker.sock"
+            instanceCapStr: "10"
+            labelString: "slave__dind"
+            name: "slave__dind"
+            pullTimeout: 300
+            remoteFs: "/home/jenkins/"
