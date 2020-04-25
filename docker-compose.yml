@@ -18,21 +18,10 @@ services:
     volumes:
       - jenkins_home:/var/jenkins_home
       - ./config/casc/:/var/jenkins_conf/
+      - /var/run/docker.sock:/var/run/docker.sock
     secrets:
       - admin_password
       - delfina_password
-
-  slave-1: &slave
-    image: jenkins/jnlp-agent-docker:latest
-    env_file:
-      - .envs/.production/.slave-1
-    depends_on:
-      - master
-
-  slave-2:
-    <<: *slave
-    env_file:
-      - .envs/.production/.slave-2
 
   nginx-proxy:
     image: jwilder/nginx-proxy

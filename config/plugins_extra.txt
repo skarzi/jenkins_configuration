@@ -1,6 +1,7 @@
 authorize-project
 blueocean:latest
 credentials:latest
+docker-plugin:latest
 docker-workflow:latest
 git:latest
 github-oauth:latest
