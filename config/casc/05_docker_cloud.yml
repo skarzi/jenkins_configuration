@@ -2,15 +2,15 @@
 credentials:
   system:
     domainCredentials:
-      - credentials:
-          - usernamePassword:
-            description: "skarzi docker hub credentials"
-            id: "docker_hub__skarzi"
-            username: "skarzi"
-            password: "${skarzi_docker_hub_password}"
-            scope: GLOBAL
-        domain:
+      - domain:
           name: "docker-cloud"
+        credentials:
+          - usernamePassword:
+              description: "skarzi docker hub credentials"
+              id: "docker_hub__skarzi"
+              username: "skarzi"
+              password: "${skarzi_docker_hub_password}"
+              scope: GLOBAL
 
 jenkins:
   clouds:
