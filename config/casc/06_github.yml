@@ -1,0 +1,17 @@
+---
+# TODO: add GitHub credentials
+unclassified:
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://ci.skarzi.com/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: true
+    useExistingAccountWithSameEmail: false
+
+tool:
+  git:
+    installations:
+      - home: "git"
+        name: "Default"

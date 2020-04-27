@@ -16,23 +16,6 @@ jenkins:
 #  remotingSecurity:
 #    enabled: true
 
-# credentials:
-#   system:
-#     domainCredentials:
-#       - credentials:
-#         - usernamePassword:
-#           scope: GLOBAL
-#           id: github-user
-#           username: ewelina
-#           password: ${github:-githubPassw0rd}
-#           description: github username/password
-
-tool:
-  git:
-    installations:
-      - name: "Default"
-        home: "git"
-
 unclassified:
   location:
     adminAddress: "skarzi <me@skarzi.com>"
