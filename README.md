@@ -1,5 +1,9 @@
 # jenkins_casc
 
+![](https://github.com/skarzi/jenkins_casc/workflows/lint/badge.svg)
+![](https://github.com/skarzi/jenkins_casc/workflows/docker_hub/badge.svg)
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=skarzi/jenkins_casc&identifier=257002919)](https://dependabot.com)
+
 Jenkins master configuration as a code
 
 ## Deployment
