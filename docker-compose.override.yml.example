@@ -6,7 +6,3 @@ services:
     build:
       args:
         - DOCKER_GID=!!SET_VALUE!!
-    ports:
-      # forward only port to communicate with JNLP agents.
-      # Web interface should be handled by nginx reverse proxy
-      - "50000:50000"

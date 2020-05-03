@@ -11,9 +11,8 @@ services:
     environment:
       - CASC_JENKINS_CONFIG=/var/jenkins_conf
     ports:
-      # web interface
-      - "8989:8080"
-      # port to communicate with JNLP agents
+      # forwards only port used to communicate with JNLP agents.
+      # Web interface (port 8080) should be handled by nginx reverse proxy
       - "50000:50000"
     volumes:
       - jenkins_home:/var/jenkins_home
