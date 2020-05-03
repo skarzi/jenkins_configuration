@@ -22,6 +22,23 @@ services:
     secrets:
       - admin_password
       - delfina_password
+    healthcheck:
+      # NOTE: `/login/` is requested, because it doesn't require
+      # authorization, other possibility is e.g. `/robots.txt`.
+      # `$$` is used here to escape `$`
+      test: |
+        /usr/bin/test $$(
+          /usr/bin/curl \
+            --fail http://$${VIRTUAL_HOST}/login \
+            --write-out "%{http_code}" \
+            --silent \
+            --output /dev/null
+        ) -eq 200
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 2m
+
 
   nginx-proxy:
     image: jwilder/nginx-proxy
