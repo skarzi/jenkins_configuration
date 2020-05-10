@@ -11,4 +11,4 @@ timestamper:latest
 workflow-aggregator:latest
 ws-cleanup:latest
 embeddable-build-status:latest
-configuration-as-code:1.39
+configuration-as-code:1.40
