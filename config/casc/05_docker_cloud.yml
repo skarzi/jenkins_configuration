@@ -9,7 +9,7 @@ credentials:
               description: "skarzi docker hub credentials"
               id: "docker_hub__skarzi"
               username: "skarzi"
-              password: "${skarzi_docker_hub_password}"
+              password: "${docker_hub__skarzi}"
               scope: GLOBAL
 
 jenkins:

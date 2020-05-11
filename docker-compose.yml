@@ -54,8 +54,8 @@ secrets:
   delfina_password:
     file: ./.secrets/delfina_password
   # docker cloud
-  skarzi_docker_hub_password:
-    file: ./.secrets/skarzi_docker_hub_password
+  docker_hub__skarzi:
+    file: ./.secrets/docker_hub__skarzi
 
 volumes:
   jenkins_home:

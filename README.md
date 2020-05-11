@@ -33,7 +33,7 @@ Populate all secrets defined in `docker-compose.yml`:
 
 + `.secrets/admin_password` - Jenkins' admin password
 + `.secrets/delfina_password` - Delfina's password
-+ `.secrets/skarzi_docker_hub_password` - properly encrypted by Jenkins,
++ `.secrets/docker_hub__skarzi` - properly encrypted by Jenkins,
   personal access token or password to
   [`skarzi` docker hub](https://hub.docker.com/u/skarzi) where Jenkins' slave
   image is hosted
