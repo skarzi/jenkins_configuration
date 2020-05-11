@@ -21,26 +21,19 @@ jenkins:
             uri: "unix:///var/run/docker.sock"
           readTimeout: 60
         exposeDockerHost: true
-        name: "docker"
+        name: "docker-cloud"
         templates:
           - connector:
-              jnlp:
-                jnlpLauncher:
-                  workDirSettings:
-                    disabled: false
-                    failIfWorkDirIsMissing: false
-                    internalDir: "remoting"
-                    workDirPath: "/home/jenkins/agent"
+              attach:
                 user: "jenkins"
             dockerTemplateBase:
-              image: "skarzi/jenkins-jnlp-slave-dind"
+              image: "skarzi/jenkins-slave-dood"
               pullCredentialsId: "docker_hub__skarzi"
               volumes:
                 - "/var/run/docker.sock:/var/run/docker.sock"
               volumesString: "/var/run/docker.sock:/var/run/docker.sock"
             instanceCapStr: "10"
-            # TODO: update label to `docker`
-            labelString: "slave__dind"
-            name: "slave__dind"
+            labelString: "docker docker-dood slave-dood"
+            name: "slave__dood"
             pullTimeout: 300
             remoteFs: "/home/jenkins/"
