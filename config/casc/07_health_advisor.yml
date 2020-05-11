@@ -1,0 +1,12 @@
+---
+advisor:
+  acceptToS: true
+  email: "me@skarzi.com"
+  excludedComponents:
+    - "Agents"
+    - "AgentsConfigFile"
+    - "ConfigFileComponent"
+    - "RootCAs"
+    - "SlaveLogs"
+    - "OtherConfigFilesComponent"
+  nagDisabled: false

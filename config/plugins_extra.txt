@@ -11,4 +11,5 @@ timestamper:latest
 workflow-aggregator:latest
 ws-cleanup:latest
 embeddable-build-status:latest
+cloudbees-jenkins-advisor:latest
 configuration-as-code:1.40
