@@ -15,7 +15,7 @@ jobs:
       - name: push jenkins dood slave image to docker hub
         uses: docker/build-push-action@v1
         with:
-          context: .
+          path: .
           dockerfile: docker/slave/Dockerfile
           build_args: DOCKER_GID=${{ secrets.DOCKER_GID }}
           cache_froms: skarzi/jenkins-slave-dood
