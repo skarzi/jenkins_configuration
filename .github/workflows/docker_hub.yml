@@ -18,6 +18,7 @@ jobs:
           context: .
           dockerfile: docker/slave/Dockerfile
           build_args: DOCKER_GID=${{ secrets.DOCKER_GID }}
+          cache_froms: skarzi/jenkins-slave-dood
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           repository: skarzi/jenkins-slave-dood
