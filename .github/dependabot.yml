@@ -1,14 +1,15 @@
+---
 version: 2
 updates:
-- package-ecosystem: docker
-  directory: "/docker/slave"
-  schedule:
-    interval: daily
-    time: "04:26"
-  open-pull-requests-limit: 10
-- package-ecosystem: docker
-  directory: "/docker/master"
-  schedule:
-    interval: daily
-    time: "04:26"
-  open-pull-requests-limit: 10
+  - package-ecosystem: docker
+    directory: "/docker/slave"
+    schedule:
+      interval: daily
+      time: "04:26"
+    open-pull-requests-limit: 1
+  - package-ecosystem: docker
+    directory: "/docker/master"
+    schedule:
+      interval: daily
+      time: "04:26"
+    open-pull-requests-limit: 1
