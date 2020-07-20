@@ -1,4 +1,4 @@
-FROM jenkins/slave:4.3-5
+FROM jenkins/slave:4.3-6
 
 ARG DOCKER_GID
 
