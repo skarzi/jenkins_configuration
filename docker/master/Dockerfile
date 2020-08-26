@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.253
+FROM jenkins/jenkins:2.254
 
 ARG JAVA_OPTS
 ARG DOCKER_GID
