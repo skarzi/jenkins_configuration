@@ -10,7 +10,7 @@ credentials:
               id: "docker_hub__skarzi"
               username: "skarzi"
               password: "${docker_hub__skarzi}"
-              scope: GLOBAL
+              scope: "GLOBAL"
 
 jenkins:
   clouds:

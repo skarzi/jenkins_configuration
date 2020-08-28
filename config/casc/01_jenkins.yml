@@ -1,6 +1,6 @@
 ---
 jenkins:
-  mode: NORMAL
+  mode: "NORMAL"
   numExecutors: 0
   scmCheckoutRetryCount: 3
   labelString: "master"
