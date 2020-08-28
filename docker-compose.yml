@@ -20,7 +20,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     secrets:
       - admin_password
-      - delfina_password
     healthcheck:
       # NOTE: `/login/` is requested, because it doesn't require
       # authorization, other possibility is e.g. `/robots.txt`.
@@ -51,8 +50,6 @@ secrets:
   # users
   admin_password:
     file: ./.secrets/admin_password
-  delfina_password:
-    file: ./.secrets/delfina_password
   # docker cloud
   docker_hub__skarzi:
     file: ./.secrets/docker_hub__skarzi
