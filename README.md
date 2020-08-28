@@ -2,7 +2,6 @@
 
 ![](https://github.com/skarzi/jenkins_configuration/workflows/lint/badge.svg)
 ![](https://github.com/skarzi/jenkins_configuration/workflows/docker_hub/badge.svg)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=skarzi/jenkins_configuration&identifier=257002919)](https://dependabot.com)
 
 Jenkins master configuration as a code
 
