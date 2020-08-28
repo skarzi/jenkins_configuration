@@ -3,7 +3,7 @@
 ![](https://github.com/skarzi/jenkins_configuration/workflows/lint/badge.svg)
 ![](https://github.com/skarzi/jenkins_configuration/workflows/docker_hub/badge.svg)
 
-Jenkins master configuration as a code
+Jenkins master configuration as a code for my personal Jenkins instance.
 
 ## Deployment
 
