@@ -7,5 +7,3 @@ jenkins:
       users:
         - id: admin
           password: "${admin_password}"
-        - id: delfina
-          password: "${delfina_password}"
