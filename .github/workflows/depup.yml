@@ -35,4 +35,5 @@ jobs:
             [depup workflow](
             https://github.com/${{ github.repository }}/actions
             ?query=workflow%3Adepup).
+          branch: dependencies/jenkins-plugins/configuration-as-code
           base: master
