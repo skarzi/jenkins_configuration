@@ -22,8 +22,7 @@ Then edit it carefully and fill all required values (environment variables
 with `!!SET_VALUE!!` value):
 
 + `.envs/.production/.master`:
-
-    + `VIRTUAL_HOST` -  Jenkins' master host
+  + `VIRTUAL_HOST` -  Jenkins' master host
 
 ### Secrets
 
