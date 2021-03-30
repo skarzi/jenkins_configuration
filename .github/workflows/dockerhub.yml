@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: setup docker tags and labels
         id: docker_meta
-        uses: crazy-max/ghaction-docker-meta@v1
+        uses: crazy-max/ghaction-docker-meta@v2.1.0
         with:
           tag-sha: true
           images: skarzi/jenkins-slave-dood
