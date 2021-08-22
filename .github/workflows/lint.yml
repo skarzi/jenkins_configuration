@@ -54,7 +54,7 @@ jobs:
       - name: debug event json
         run: cat "${GITHUB_EVENT_PATH}"
       - name: lint markdown files
-        uses: reviewdog/action-markdownlint@v0.1.2
+        uses: reviewdog/action-markdownlint@v0.2
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
