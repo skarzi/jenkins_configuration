@@ -12,4 +12,4 @@ workflow-aggregator:latest
 ws-cleanup:latest
 embeddable-build-status:latest
 cloudbees-jenkins-advisor:latest
-configuration-as-code:1.52
+configuration-as-code:1.53
